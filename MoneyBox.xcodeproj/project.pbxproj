@@ -7,10 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B228EA6B2880B30B00B35F16 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B228EA692880B30B00B35F16 /* LoginViewController.swift */; };
-		B228EA6C2880B30B00B35F16 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B228EA6A2880B30B00B35F16 /* Login.storyboard */; };
+		4108911C2AAF241D0056AECE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108911B2AAF241D0056AECE /* main.swift */; };
+		4108911E2AAF24430056AECE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108911D2AAF24430056AECE /* AppCoordinator.swift */; };
+		410891202AAF24480056AECE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108911F2AAF24480056AECE /* AppDelegate.swift */; };
+		410891242AAF28180056AECE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410891232AAF28180056AECE /* LoginViewController.swift */; };
+		410891262AAF28200056AECE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 410891252AAF28200056AECE /* LoginViewController.xib */; };
+		410891282AAF283E0056AECE /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410891272AAF283E0056AECE /* LoginPresenter.swift */; };
+		4108912B2AAF2FA20056AECE /* EmailValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108912A2AAF2FA10056AECE /* EmailValidator.swift */; };
+		4108912D2AAF306C0056AECE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108912C2AAF306C0056AECE /* LoginViewModel.swift */; };
+		410891332AAF31B20056AECE /* TextSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410891302AAF31B20056AECE /* TextSource.swift */; };
+		410891342AAF31B20056AECE /* ImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410891312AAF31B20056AECE /* ImageSource.swift */; };
+		410891392AAF31BC0056AECE /* UIImage+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410891372AAF31BC0056AECE /* UIImage+Additions.swift */; };
+		4108913A2AAF31BC0056AECE /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410891382AAF31BC0056AECE /* String+Additions.swift */; };
+		4108913D2AAF31F10056AECE /* AssetProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108913C2AAF31F10056AECE /* AssetProviderProtocol.swift */; };
+		4108913F2AAF361D0056AECE /* UIButton+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108913E2AAF361D0056AECE /* UIButton+Additions.swift */; };
+		410891412AAF39690056AECE /* KeyboardHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410891402AAF39690056AECE /* KeyboardHandlerProtocol.swift */; };
+		410891442AAF39F60056AECE /* LoginFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410891432AAF39F60056AECE /* LoginFlowCoordinator.swift */; };
+		410891462AAF3A280056AECE /* AssetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410891452AAF3A280056AECE /* AssetProvider.swift */; };
+		410891482AAF3A5A0056AECE /* FlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410891472AAF3A5A0056AECE /* FlowCoordinator.swift */; };
+		4108914A2AAF6CBB0056AECE /* GenericError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410891492AAF6CBB0056AECE /* GenericError.swift */; };
+		4108914C2AAFBC650056AECE /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108914B2AAFBC650056AECE /* Theme.swift */; };
+		4108914F2AAFBCA30056AECE /* UITextField+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4108914E2AAFBCA30056AECE /* UITextField+Additions.swift */; };
+		410891512AAFBD930056AECE /* UIButton+Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410891502AAFBD930056AECE /* UIButton+Styling.swift */; };
+		410891532AAFBED10056AECE /* NSAttributedString+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410891522AAFBED10056AECE /* NSAttributedString+Additions.swift */; };
 		B26EF47828881E7F003BFDF2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = B26EF47728881E7F003BFDF2 /* Networking */; };
-		B2CA46CC279350880041B3A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA46CB279350880041B3A5 /* AppDelegate.swift */; };
 		B2CA46D52793508A0041B3A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2CA46D42793508A0041B3A5 /* Assets.xcassets */; };
 		B2CA46D82793508A0041B3A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2CA46D62793508A0041B3A5 /* LaunchScreen.storyboard */; };
 		B2CA47672794D69A0041B3A5 /* StubData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2CA47662794D69A0041B3A5 /* StubData.swift */; };
@@ -29,11 +49,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B228EA692880B30B00B35F16 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		B228EA6A2880B30B00B35F16 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		4108911B2AAF241D0056AECE /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4108911D2AAF24430056AECE /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		4108911F2AAF24480056AECE /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../Desktop/BeFiler/BeFiler/AppDelegate.swift; sourceTree = "<group>"; };
+		410891232AAF28180056AECE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		410891252AAF28200056AECE /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		410891272AAF283E0056AECE /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		4108912A2AAF2FA10056AECE /* EmailValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
+		4108912C2AAF306C0056AECE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		410891302AAF31B20056AECE /* TextSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSource.swift; sourceTree = "<group>"; };
+		410891312AAF31B20056AECE /* ImageSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSource.swift; sourceTree = "<group>"; };
+		410891372AAF31BC0056AECE /* UIImage+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Additions.swift"; sourceTree = "<group>"; };
+		410891382AAF31BC0056AECE /* String+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
+		4108913C2AAF31F10056AECE /* AssetProviderProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetProviderProtocol.swift; sourceTree = "<group>"; };
+		4108913E2AAF361D0056AECE /* UIButton+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Additions.swift"; sourceTree = "<group>"; };
+		410891402AAF39690056AECE /* KeyboardHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandlerProtocol.swift; sourceTree = "<group>"; };
+		410891432AAF39F60056AECE /* LoginFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowCoordinator.swift; sourceTree = "<group>"; };
+		410891452AAF3A280056AECE /* AssetProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetProvider.swift; sourceTree = "<group>"; };
+		410891472AAF3A5A0056AECE /* FlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlowCoordinator.swift; sourceTree = "<group>"; };
+		410891492AAF6CBB0056AECE /* GenericError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericError.swift; sourceTree = "<group>"; };
+		4108914B2AAFBC650056AECE /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		4108914E2AAFBCA30056AECE /* UITextField+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Additions.swift"; sourceTree = "<group>"; };
+		410891502AAFBD930056AECE /* UIButton+Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Styling.swift"; sourceTree = "<group>"; };
+		410891522AAFBED10056AECE /* NSAttributedString+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Additions.swift"; sourceTree = "<group>"; };
 		B24EED92288ED5740016C233 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
 		B2CA46C8279350880041B3A5 /* MoneyBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2CA46CB279350880041B3A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2CA46D42793508A0041B3A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2CA46D72793508A0041B3A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2CA46D92793508A0041B3A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -62,11 +102,100 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		410891212AAF27FC0056AECE /* Main Journeys */ = {
+			isa = PBXGroup;
+			children = (
+				410891422AAF39D60056AECE /* Login Flow */,
+			);
+			path = "Main Journeys";
+			sourceTree = "<group>";
+		};
+		410891222AAF28050056AECE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				410891232AAF28180056AECE /* LoginViewController.swift */,
+				410891252AAF28200056AECE /* LoginViewController.xib */,
+				410891272AAF283E0056AECE /* LoginPresenter.swift */,
+				4108912C2AAF306C0056AECE /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		410891292AAF2F3D0056AECE /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				410891452AAF3A280056AECE /* AssetProvider.swift */,
+				4108912A2AAF2FA10056AECE /* EmailValidator.swift */,
+				4108914B2AAFBC650056AECE /* Theme.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		4108912E2AAF31A40056AECE /* MBKit */ = {
+			isa = PBXGroup;
+			children = (
+				410891362AAF31BC0056AECE /* Extensions */,
+				4108912F2AAF31B20056AECE /* Objects */,
+			);
+			path = MBKit;
+			sourceTree = "<group>";
+		};
+		4108912F2AAF31B20056AECE /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				410891492AAF6CBB0056AECE /* GenericError.swift */,
+				410891302AAF31B20056AECE /* TextSource.swift */,
+				410891312AAF31B20056AECE /* ImageSource.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		410891362AAF31BC0056AECE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4108913E2AAF361D0056AECE /* UIButton+Additions.swift */,
+				410891372AAF31BC0056AECE /* UIImage+Additions.swift */,
+				410891382AAF31BC0056AECE /* String+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4108913B2AAF31F10056AECE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				4108913C2AAF31F10056AECE /* AssetProviderProtocol.swift */,
+				410891472AAF3A5A0056AECE /* FlowCoordinator.swift */,
+				410891402AAF39690056AECE /* KeyboardHandlerProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		410891422AAF39D60056AECE /* Login Flow */ = {
+			isa = PBXGroup;
+			children = (
+				410891432AAF39F60056AECE /* LoginFlowCoordinator.swift */,
+				410891222AAF28050056AECE /* Login */,
+			);
+			path = "Login Flow";
+			sourceTree = "<group>";
+		};
+		4108914D2AAFBC860056AECE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				410891502AAFBD930056AECE /* UIButton+Styling.swift */,
+				4108914E2AAFBCA30056AECE /* UITextField+Additions.swift */,
+				410891522AAFBED10056AECE /* NSAttributedString+Additions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		B2CA46BF279350880041B3A5 = {
 			isa = PBXGroup;
 			children = (
 				B2DEEA31288818470030A8F2 /* Packages */,
 				B2CA46CA279350880041B3A5 /* MoneyBox */,
+				4108912E2AAF31A40056AECE /* MBKit */,
+				4108913B2AAF31F10056AECE /* Protocols */,
 				B2CA46E12793508A0041B3A5 /* MoneyBoxTests */,
 				B2CA46C9279350880041B3A5 /* Products */,
 			);
@@ -84,9 +213,12 @@
 		B2CA46CA279350880041B3A5 /* MoneyBox */ = {
 			isa = PBXGroup;
 			children = (
-				B228EA6A2880B30B00B35F16 /* Login.storyboard */,
-				B228EA692880B30B00B35F16 /* LoginViewController.swift */,
-				B2CA46CB279350880041B3A5 /* AppDelegate.swift */,
+				4108911B2AAF241D0056AECE /* main.swift */,
+				4108911F2AAF24480056AECE /* AppDelegate.swift */,
+				4108911D2AAF24430056AECE /* AppCoordinator.swift */,
+				410891212AAF27FC0056AECE /* Main Journeys */,
+				4108914D2AAFBC860056AECE /* Extensions */,
+				410891292AAF2F3D0056AECE /* Objects */,
 				B2CA46D42793508A0041B3A5 /* Assets.xcassets */,
 				B2CA46D62793508A0041B3A5 /* LaunchScreen.storyboard */,
 				B2CA46D92793508A0041B3A5 /* Info.plist */,
@@ -206,10 +338,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				410891262AAF28200056AECE /* LoginViewController.xib in Resources */,
 				B2CA46D82793508A0041B3A5 /* LaunchScreen.storyboard in Resources */,
 				B2CA47712794D8E50041B3A5 /* LoginSucceed.json in Resources */,
 				B2CA46D52793508A0041B3A5 /* Assets.xcassets in Resources */,
-				B228EA6C2880B30B00B35F16 /* Login.storyboard in Resources */,
 				B2CA47B42796052F0041B3A5 /* Accounts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,8 +360,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2CA46CC279350880041B3A5 /* AppDelegate.swift in Sources */,
-				B228EA6B2880B30B00B35F16 /* LoginViewController.swift in Sources */,
+				410891392AAF31BC0056AECE /* UIImage+Additions.swift in Sources */,
+				410891242AAF28180056AECE /* LoginViewController.swift in Sources */,
+				4108913A2AAF31BC0056AECE /* String+Additions.swift in Sources */,
+				410891532AAFBED10056AECE /* NSAttributedString+Additions.swift in Sources */,
+				410891332AAF31B20056AECE /* TextSource.swift in Sources */,
+				4108911E2AAF24430056AECE /* AppCoordinator.swift in Sources */,
+				410891202AAF24480056AECE /* AppDelegate.swift in Sources */,
+				4108914A2AAF6CBB0056AECE /* GenericError.swift in Sources */,
+				4108914F2AAFBCA30056AECE /* UITextField+Additions.swift in Sources */,
+				410891342AAF31B20056AECE /* ImageSource.swift in Sources */,
+				410891412AAF39690056AECE /* KeyboardHandlerProtocol.swift in Sources */,
+				4108913D2AAF31F10056AECE /* AssetProviderProtocol.swift in Sources */,
+				410891462AAF3A280056AECE /* AssetProvider.swift in Sources */,
+				410891482AAF3A5A0056AECE /* FlowCoordinator.swift in Sources */,
+				410891442AAF39F60056AECE /* LoginFlowCoordinator.swift in Sources */,
+				4108914C2AAFBC650056AECE /* Theme.swift in Sources */,
+				4108913F2AAF361D0056AECE /* UIButton+Additions.swift in Sources */,
+				4108911C2AAF241D0056AECE /* main.swift in Sources */,
+				410891282AAF283E0056AECE /* LoginPresenter.swift in Sources */,
+				410891512AAFBD930056AECE /* UIButton+Styling.swift in Sources */,
+				4108912B2AAF2FA20056AECE /* EmailValidator.swift in Sources */,
+				4108912D2AAF306C0056AECE /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,16 +536,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7DM2UT7C8G;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MoneyBox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Login;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -402,6 +553,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = moneybox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -413,16 +565,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7DM2UT7C8G;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MoneyBox/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Login;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -431,6 +582,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = moneybox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

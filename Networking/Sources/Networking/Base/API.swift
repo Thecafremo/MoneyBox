@@ -8,6 +8,7 @@
 import Foundation
 
 public enum API {
+    
     static func getURL(with path: String = "") -> URL {
         return URL(string: ("https://api-test02.moneyboxapp.com\(path)"))!
     }
