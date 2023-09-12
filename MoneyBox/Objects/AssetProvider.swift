@@ -16,7 +16,7 @@ final class AssetProvider {
 extension AssetProvider: AssetProviderProtocol {
     
     func imageResource(named name: String) -> UIImage? {
-        return nil //TODO: 
+        UIImage(named: name)
     }
     
     func localizedString(forKey key: String) -> String {

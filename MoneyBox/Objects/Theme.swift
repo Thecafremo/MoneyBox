@@ -9,6 +9,6 @@ import UIKit
 
 struct Theme {
     
-    let accentColor = UIColor(named: "AccentColor")!
-    let darkColor = UIColor(named: "GreyColor")! //TODO: This should be have an agnostic name.
+    let accentColor = UIColor(named: "accent")!
+    let surfaceFillColor = UIColor(named: "surfaceFill")!
 }

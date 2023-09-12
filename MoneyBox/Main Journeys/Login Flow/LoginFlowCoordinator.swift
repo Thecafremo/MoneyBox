@@ -14,6 +14,8 @@ final class LoginFlowCoordinator: FlowCoordinator {
     
     var navigationController: UINavigationController
     
+    private weak var delegate: LoginFlowCoordinatorDelegate?
+    
     private let assetProvider: AssetProviderProtocol
     private let dataProvider: DataProviderLogic
     private let emailValidator: EmailValidatorProtocol
@@ -21,12 +23,14 @@ final class LoginFlowCoordinator: FlowCoordinator {
     
     //MARK: – Life Cycle.
     
-    init(assetProvider: AssetProviderProtocol, dataProvider: DataProviderLogic, emailValidator: EmailValidatorProtocol, theme: Theme) {
+    init(assetProvider: AssetProviderProtocol, dataProvider: DataProviderLogic, emailValidator: EmailValidatorProtocol, theme: Theme, delegate: LoginFlowCoordinatorDelegate) {
         
         self.assetProvider = assetProvider
         self.dataProvider = dataProvider
         self.emailValidator = emailValidator
         self.theme = theme
+        
+        self.delegate = delegate
         
         self.navigationController = UINavigationController()
         self.navigationController.modalPresentationStyle = .fullScreen
@@ -60,4 +64,12 @@ extension LoginFlowCoordinator: LoginPresenterDelegate {
     func loginPresenter(_ loginPresenter: LoginPresenter, didFinishWithLoginResponse loginResponse: LoginResponse) {
         
     }
+}
+
+//MARK: - Definitions.
+
+protocol LoginFlowCoordinatorDelegate: AnyObject {
+    
+    func loginFlowCoordinator(_ flowCoordinator: LoginFlowCoordinator, didFinishWithLoginResponse loginResponse: LoginResponse)
+    
 }

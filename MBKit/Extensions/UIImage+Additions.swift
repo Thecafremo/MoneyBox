@@ -12,8 +12,8 @@ extension UIImage {
     static func from(_ imageSource: ImageSource, assetProvider: AssetProviderProtocol?) -> UIImage? {
         
         switch imageSource {
-        case .assets(_):
-            fatalError("setImage:from:assetProvider not implemented")
+        case .assets(let name):
+            return assetProvider?.imageResource(named: name)
 
         case .systemSymbol(let string):
             return UIImage(systemName: string)

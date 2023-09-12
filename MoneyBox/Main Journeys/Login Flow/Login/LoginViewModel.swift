@@ -11,6 +11,8 @@ struct LoginViewModel {
     
     //MARK: - Properties.
     
+    let imageViewImageSource: ImageSource = .assets("logo")
+    
     let primaryTextFieldPlaceholderTextSource: TextSource
     let secondaryTextFieldPlaceholderTextSource: TextSource
     

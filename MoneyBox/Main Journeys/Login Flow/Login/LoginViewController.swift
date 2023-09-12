@@ -11,6 +11,8 @@ final class LoginViewController: UIViewController {
     
     //MARK: - Properties.
     
+    @IBOutlet private weak var imageView: UIImageView!
+    
     @IBOutlet private weak var primaryTextField: UITextField!
     @IBOutlet private weak var secondaryTextField: UITextField!
     
@@ -74,6 +76,8 @@ extension LoginViewController: LoginDisplayable {
     
     func populate(with viewModel: LoginViewModel) {
         
+        imageView.image = UIImage.from(viewModel.imageViewImageSource, assetProvider: assetProvider)
+        
         primaryTextField.attributedPlaceholder = NSAttributedString.init(textSource: viewModel.primaryTextFieldPlaceholderTextSource, assetProvider: assetProvider, color: theme.accentColor)
         secondaryTextField.attributedPlaceholder = NSAttributedString.init(textSource: viewModel.secondaryTextFieldPlaceholderTextSource, assetProvider: assetProvider, color: theme.accentColor)
 
@@ -109,7 +113,7 @@ extension LoginViewController {
         
         button.applyPrimaryStyle(with: theme)
         
-        view.backgroundColor = theme.darkColor
+        view.backgroundColor = theme.surfaceFillColor
     }
 }
 

@@ -38,7 +38,6 @@ extension AppCoordinator {
     
     func start() {
         
-        configureComponents()
         configureAppearance()
         
         displayLoginJourney(on: window)
@@ -49,12 +48,6 @@ extension AppCoordinator {
 //MARK: - Private Methods.
 
 extension AppCoordinator {
-    
-    private func configureComponents() {
-        
-        //TODO: Move to the end of the Login flow (if implemented).
-//        (requester as? RequestManager)?.setCredentials(URLCredential(user: "noel", password: "foobar", persistence: .none))
-    }
     
     private func configureAppearance() {
         
@@ -71,7 +64,8 @@ extension AppCoordinator {
         let loginFlowCoordinator = LoginFlowCoordinator(assetProvider: assetProvider,
                                                         dataProvider: dataProvider,
                                                         emailValidator: EmailValidator(), 
-                                                        theme: theme)
+                                                        theme: theme,
+                                                        delegate: self)
         
         
         window.rootViewController = loginFlowCoordinator.navigationController
@@ -91,5 +85,17 @@ extension AppCoordinator {
 //        
 //        window.rootViewController = fileNavigationFlowCoordinator.navigationController
 //        childFlowCoordinators.append(fileNavigationFlowCoordinator)
+    }
+}
+
+
+//MARK: – LoginFlowCoordinatorDelegate.
+
+extension AppCoordinator: LoginFlowCoordinatorDelegate {
+    
+    func loginFlowCoordinator(_ flowCoordinator: LoginFlowCoordinator, didFinishWithLoginResponse loginResponse: LoginResponse) {
+        
+        Authentication.token = loginResponse.session.bearerToken
+        
     }
 }
