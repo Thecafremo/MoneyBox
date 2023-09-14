@@ -1,8 +1,8 @@
 //
 //  KeyboardHandlerProtocol.swift
-//  BudKit
+//  Moneybox
 //
-//  Created by Axel Lundback on 02/04/2019.
+//  Created by Jorge Pardo on 02/04/2019.
 //
 
 import UIKit

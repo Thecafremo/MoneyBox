@@ -2,7 +2,7 @@
 //  UITableView+LoadablePodResource.swift
 //  MoneyBox
 //
-//  Created by Thecafremo on 12/09/2023.
+//  Created by Jorge Pardo on 12/09/2023.
 //
 
 import UIKit

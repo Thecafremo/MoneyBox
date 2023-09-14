@@ -2,7 +2,7 @@
 //  ProductViewModel.swift
 //  MoneyBoxTests
 //
-//  Created by Thecafremo on 14/09/2023.
+//  Created by Jorge Pardo on 14/09/2023.
 //
 
 @testable import MoneyBox

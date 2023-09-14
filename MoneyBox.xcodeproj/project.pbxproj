@@ -34,7 +34,6 @@
 		4132C6AC2AB072CE00C00795 /* ProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132C6AB2AB072CE00C00795 /* ProductsViewController.swift */; };
 		4132C6B02AB0738E00C00795 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132C6AF2AB0738E00C00795 /* ProductTableViewCell.swift */; };
 		4132C6B22AB0901400C00795 /* ProductCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132C6B12AB0901400C00795 /* ProductCellViewModel.swift */; };
-		4132C6B42AB0959100C00795 /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132C6B32AB0959100C00795 /* CurrencyFormatter.swift */; };
 		4132C6B62AB0BAE400C00795 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4132C6B52AB0BAE400C00795 /* ProductTableViewCell.xib */; };
 		4132C6B82AB0BD4500C00795 /* ProductsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132C6B72AB0BD4500C00795 /* ProductsPresenter.swift */; };
 		4132C6BA2AB0BF3500C00795 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132C6B92AB0BF3500C00795 /* ProductsViewModel.swift */; };
@@ -89,7 +88,6 @@
 		4132C6AB2AB072CE00C00795 /* ProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewController.swift; sourceTree = "<group>"; };
 		4132C6AF2AB0738E00C00795 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		4132C6B12AB0901400C00795 /* ProductCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCellViewModel.swift; sourceTree = "<group>"; };
-		4132C6B32AB0959100C00795 /* CurrencyFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
 		4132C6B52AB0BAE400C00795 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		4132C6B72AB0BD4500C00795 /* ProductsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsPresenter.swift; sourceTree = "<group>"; };
 		4132C6B92AB0BF3500C00795 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
@@ -152,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				410891452AAF3A280056AECE /* AssetProvider.swift */,
-				4132C6B32AB0959100C00795 /* CurrencyFormatter.swift */,
 				4108912A2AAF2FA10056AECE /* EmailValidator.swift */,
 				4108914B2AAFBC650056AECE /* Theme.swift */,
 			);
@@ -470,7 +467,6 @@
 				410891512AAFBD930056AECE /* UIButton+Styling.swift in Sources */,
 				4108912B2AAF2FA20056AECE /* EmailValidator.swift in Sources */,
 				4132C6AC2AB072CE00C00795 /* ProductsViewController.swift in Sources */,
-				4132C6B42AB0959100C00795 /* CurrencyFormatter.swift in Sources */,
 				4132C6C02AB1DA6D00C00795 /* UITableView+Additions.swift in Sources */,
 				4108912D2AAF306C0056AECE /* LoginViewModel.swift in Sources */,
 			);

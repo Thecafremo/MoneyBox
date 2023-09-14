@@ -2,7 +2,7 @@
 //  LoginPresenter.swift
 //  MoneyBox
 //
-//  Created by Thecafremo on 11/09/2023.
+//  Created by Jorge Pardo on 11/09/2023.
 //
 
 import Foundation
