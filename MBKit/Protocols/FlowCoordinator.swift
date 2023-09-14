@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol FlowCoordinator {
+protocol FlowCoordinator: AnyObject {
     
     // MARK: - Properties.
 

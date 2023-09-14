@@ -62,7 +62,7 @@ extension LoginFlowCoordinator {
 extension LoginFlowCoordinator: LoginPresenterDelegate {
     
     func loginPresenter(_ loginPresenter: LoginPresenter, didFinishWithLoginResponse loginResponse: LoginResponse) {
-        
+        delegate?.loginFlowCoordinator(self, didFinishWithLoginResponse: loginResponse)
     }
 }
 

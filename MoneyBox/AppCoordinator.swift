@@ -19,6 +19,18 @@ final class AppCoordinator {
     private let theme: Theme //TODO: This should be a protocol. 
     
     private var childFlowCoordinators = [FlowCoordinator]()
+    
+    private lazy var numberFormmater: NumberFormatter = { //TODO: This should have a class of its own, handling multiple currencies, if needed.
+       
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+        formatter.locale = Locale.autoupdatingCurrent
+        formatter.currencyCode = "GBP" //TODO: This should be coming from the BE, as part of the Product / Account information.
+        
+        return formatter
+    }()
         
     //MARK: - Life Cycle.
     
@@ -72,22 +84,21 @@ extension AppCoordinator {
         childFlowCoordinators.append(loginFlowCoordinator)
     }
     
-    private func displayMainJourney(on window: UIWindow) {
+    private func displayMainJourney(on window: UIWindow, username: String?) {
         
-//        let itemAPI = ItemAPI(requester: requester, baseURL: baseURL)
-//        let userAPI = UserAPI(requester: requester, baseURL: baseURL)
-//        
-//        let dependencies = FileNavigationFlowCoordinator.Dependencies(itemAPI: itemAPI,
-//                                                                      userAPI: userAPI,
-//                                                                      assetProvider: assetProvider)
-//        
-//        let fileNavigationFlowCoordinator = FileNavigationFlowCoordinator(dependencies: dependencies, delegate: self)
-//        
-//        window.rootViewController = fileNavigationFlowCoordinator.navigationController
-//        childFlowCoordinators.append(fileNavigationFlowCoordinator)
+        dismissAnyPresentedFlowCoordinators()
+        
+        let productsFlowCoordinator = ProductsFlowCoordinator(assetProvider: assetProvider,
+                                                              dataProvider: dataProvider,
+                                                              theme: theme,
+                                                              numberFormatter: numberFormmater,
+                                                              username: username,
+                                                              delegate: self)
+        
+        window.rootViewController = productsFlowCoordinator.navigationController
+        childFlowCoordinators.append(productsFlowCoordinator)
     }
 }
-
 
 //MARK: – LoginFlowCoordinatorDelegate.
 
@@ -95,7 +106,30 @@ extension AppCoordinator: LoginFlowCoordinatorDelegate {
     
     func loginFlowCoordinator(_ flowCoordinator: LoginFlowCoordinator, didFinishWithLoginResponse loginResponse: LoginResponse) {
         
-        Authentication.token = loginResponse.session.bearerToken
+        Authentication.token = loginResponse.session.bearerToken //TODO: The DataProvider should have a delegate to handle 401s and 403s.
+        displayMainJourney(on: window, username: loginResponse.user.firstName)
+    }
+}
+
+//MARK: – ProductsFlowCoordinatorDelegate.
+
+extension AppCoordinator: ProductsFlowCoordinatorDelegate {
+    
+}
+
+
+//MARK: - Helper Methods.
+
+extension AppCoordinator {
+    
+    private func dismissAnyPresentedFlowCoordinators() {
+        childFlowCoordinators.forEach { dismiss($0) }
+    }
+    
+    private func dismiss(_ flowCoordinator: FlowCoordinator, animated: Bool = true) {
         
+        flowCoordinator.navigationController.dismiss(animated: animated) {
+            self.childFlowCoordinators.removeAll { $0 === flowCoordinator }
+        }
     }
 }
