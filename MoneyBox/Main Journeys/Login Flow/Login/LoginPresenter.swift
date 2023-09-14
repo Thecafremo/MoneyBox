@@ -18,8 +18,8 @@ final class LoginPresenter {
     private let dataProvider: DataProviderLogic
     private let emailValidator: EmailValidatorProtocol
     
-    private var email: String? = "test+ios2@moneyboxapp.com"
-    private var password: String? = "P455word12"
+    private var email: String?
+    private var password: String?
     
     //MARK: - Life Cycle.
     

@@ -83,7 +83,7 @@ extension LoginViewController: LoginDisplayable {
 
         button.setTextFrom(viewModel.primaryButtonTextSource, assetProvider: assetProvider)
         
-//        button.isEnabled = viewModel.isPrimaryButtonEnabled
+        button.isEnabled = viewModel.isPrimaryButtonEnabled
         button.alpha = viewModel.primaryButtonAlpha
         
         activityIndicator.isHidden = viewModel.isActivityIndicatorHidden

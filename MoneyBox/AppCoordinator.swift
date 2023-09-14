@@ -20,7 +20,7 @@ final class AppCoordinator {
     
     private var childFlowCoordinators = [FlowCoordinator]()
     
-    private lazy var numberFormmater: NumberFormatter = { //TODO: This should have a class of its own, handling multiple currencies, if needed.
+    private lazy var numberFormatter: NumberFormatter = { //TODO: This should have a class of its own, handling multiple currencies, if needed.
        
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
@@ -91,7 +91,7 @@ extension AppCoordinator {
         let productsFlowCoordinator = ProductsFlowCoordinator(assetProvider: assetProvider,
                                                               dataProvider: dataProvider,
                                                               theme: theme,
-                                                              numberFormatter: numberFormmater,
+                                                              numberFormatter: numberFormatter,
                                                               username: username,
                                                               delegate: self)
         
