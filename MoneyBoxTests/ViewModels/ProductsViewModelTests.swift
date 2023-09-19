@@ -67,7 +67,7 @@ final class ProductsViewModelTests: XCTestCase {
     
     
     func test_buildForError() {
-        //TODO: `buildForError` was not proplery implemented.
+        //TODO: `buildForError` was not properly implemented.
     }
 }
 
