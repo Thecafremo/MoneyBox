@@ -42,6 +42,11 @@
 		4132C6C22AB303F200C00795 /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132C6C12AB303F200C00795 /* UIColor+Additions.swift */; };
 		4132C6C52AB3155D00C00795 /* ProductsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4132C6C42AB3155D00C00795 /* ProductsViewModelTests.swift */; };
 		417DC9732AB9F7D0003636A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417DC9722AB9F7D0003636A3 /* AppDelegate.swift */; };
+		417DC9762AB9F908003636A3 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417DC9752AB9F908003636A3 /* AccountViewController.swift */; };
+		417DC9782AB9F910003636A3 /* AccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 417DC9772AB9F910003636A3 /* AccountViewController.xib */; };
+		417DC97A2AB9F91D003636A3 /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417DC9792AB9F91D003636A3 /* AccountPresenter.swift */; };
+		417DC97C2AB9F927003636A3 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417DC97B2AB9F927003636A3 /* AccountViewModel.swift */; };
+		417DC97E2ABA037E003636A3 /* NumberFormatter+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417DC97D2ABA037E003636A3 /* NumberFormatter+Additions.swift */; };
 		B26EF47828881E7F003BFDF2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = B26EF47728881E7F003BFDF2 /* Networking */; };
 		B2CA46D52793508A0041B3A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2CA46D42793508A0041B3A5 /* Assets.xcassets */; };
 		B2CA46D82793508A0041B3A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2CA46D62793508A0041B3A5 /* LaunchScreen.storyboard */; };
@@ -96,6 +101,11 @@
 		4132C6C12AB303F200C00795 /* UIColor+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		4132C6C42AB3155D00C00795 /* ProductsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModelTests.swift; sourceTree = "<group>"; };
 		417DC9722AB9F7D0003636A3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		417DC9752AB9F908003636A3 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		417DC9772AB9F910003636A3 /* AccountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountViewController.xib; sourceTree = "<group>"; };
+		417DC9792AB9F91D003636A3 /* AccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
+		417DC97B2AB9F927003636A3 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		417DC97D2ABA037E003636A3 /* NumberFormatter+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Additions.swift"; sourceTree = "<group>"; };
 		B24EED92288ED5740016C233 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
 		B2CA46C8279350880041B3A5 /* MoneyBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2CA46D42793508A0041B3A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -214,6 +224,7 @@
 				410891502AAFBD930056AECE /* UIButton+Styling.swift */,
 				4108914E2AAFBCA30056AECE /* UITextField+Additions.swift */,
 				410891522AAFBED10056AECE /* NSAttributedString+Additions.swift */,
+				417DC97D2ABA037E003636A3 /* NumberFormatter+Additions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -223,6 +234,7 @@
 			children = (
 				4132C6A92AB0720600C00795 /* ProductsFlowCoordinator.swift */,
 				4132C6A82AB071FB00C00795 /* Products */,
+				417DC9742AB9F8F8003636A3 /* Account */,
 			);
 			path = "Accounts Flow";
 			sourceTree = "<group>";
@@ -262,6 +274,17 @@
 				4132C6C42AB3155D00C00795 /* ProductsViewModelTests.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		417DC9742AB9F8F8003636A3 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				417DC9752AB9F908003636A3 /* AccountViewController.swift */,
+				417DC9772AB9F910003636A3 /* AccountViewController.xib */,
+				417DC9792AB9F91D003636A3 /* AccountPresenter.swift */,
+				417DC97B2AB9F927003636A3 /* AccountViewModel.swift */,
+			);
+			path = Account;
 			sourceTree = "<group>";
 		};
 		B2CA46BF279350880041B3A5 = {
@@ -420,6 +443,7 @@
 				4132C6BC2AB1B9EC00C00795 /* ProductsViewController.xib in Resources */,
 				B2CA47712794D8E50041B3A5 /* LoginSucceed.json in Resources */,
 				B2CA46D52793508A0041B3A5 /* Assets.xcassets in Resources */,
+				417DC9782AB9F910003636A3 /* AccountViewController.xib in Resources */,
 				B2CA47B42796052F0041B3A5 /* Accounts.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -440,6 +464,7 @@
 			files = (
 				410891392AAF31BC0056AECE /* UIImage+Additions.swift in Sources */,
 				410891242AAF28180056AECE /* LoginViewController.swift in Sources */,
+				417DC9762AB9F908003636A3 /* AccountViewController.swift in Sources */,
 				4108913A2AAF31BC0056AECE /* String+Additions.swift in Sources */,
 				4132C6B02AB0738E00C00795 /* ProductTableViewCell.swift in Sources */,
 				410891532AAFBED10056AECE /* NSAttributedString+Additions.swift in Sources */,
@@ -460,14 +485,17 @@
 				4108914C2AAFBC650056AECE /* Theme.swift in Sources */,
 				4108913F2AAF361D0056AECE /* UIButton+Additions.swift in Sources */,
 				4108911C2AAF241D0056AECE /* main.swift in Sources */,
+				417DC97E2ABA037E003636A3 /* NumberFormatter+Additions.swift in Sources */,
 				417DC9732AB9F7D0003636A3 /* AppDelegate.swift in Sources */,
 				4132C6BA2AB0BF3500C00795 /* ProductsViewModel.swift in Sources */,
+				417DC97A2AB9F91D003636A3 /* AccountPresenter.swift in Sources */,
 				410891282AAF283E0056AECE /* LoginPresenter.swift in Sources */,
 				4132C6C22AB303F200C00795 /* UIColor+Additions.swift in Sources */,
 				410891512AAFBD930056AECE /* UIButton+Styling.swift in Sources */,
 				4108912B2AAF2FA20056AECE /* EmailValidator.swift in Sources */,
 				4132C6AC2AB072CE00C00795 /* ProductsViewController.swift in Sources */,
 				4132C6C02AB1DA6D00C00795 /* UITableView+Additions.swift in Sources */,
+				417DC97C2AB9F927003636A3 /* AccountViewModel.swift in Sources */,
 				4108912D2AAF306C0056AECE /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

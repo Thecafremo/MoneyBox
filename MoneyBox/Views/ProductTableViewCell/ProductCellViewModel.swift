@@ -38,16 +38,3 @@ extension ProductCellViewModel {
     }
 }
 
-//MARK: - Helper Methods.
-
-extension NumberFormatter {
-    
-    fileprivate func currencyString(for value: Double?) -> String {
-        
-        guard let value else {
-            return " – "
-        }
-        
-        return self.string(from: NSNumber(value: value)) ?? " – "
-    }
-}

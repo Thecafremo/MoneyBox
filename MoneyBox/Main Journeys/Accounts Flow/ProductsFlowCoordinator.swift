@@ -21,6 +21,8 @@ final class ProductsFlowCoordinator: FlowCoordinator {
     private let theme: Theme
     private let numberFormatter: NumberFormatter
     
+    private var refreshClosure: ((Bool) -> Void)?
+    
     //MARK: - Life Cycle.
     
     init(assetProvider: AssetProviderProtocol, dataProvider: DataProviderLogic, theme: Theme, numberFormatter: NumberFormatter, username: String?, delegate: ProductsFlowCoordinatorDelegate) {
@@ -62,8 +64,30 @@ extension ProductsFlowCoordinator {
 
 extension ProductsFlowCoordinator: ProductsPresenterDelegate {
     
-    func productsPresenter(_ presenter: ProductsPresenter, didSelectProductResponse productResponse: ProductResponse, withRefreshClosure refreshClosure: ((Bool) -> Void)) {
-        //TODO: Implement, and push, next screen and appropriately call the `refreshClosure`.
+    func productsPresenter(_ presenter: ProductsPresenter, didSelectProductResponse productResponse: ProductResponse, withRefreshClosure refreshClosure: @escaping ((Bool) -> Void)) {
+        
+        self.refreshClosure = refreshClosure
+        
+        let accountViewController = AccountViewController()
+        accountViewController.title = productResponse.product?.friendlyName
+        accountViewController.assetProvider = assetProvider
+        accountViewController.theme = theme
+        accountViewController.presenter = AccountPresenter(view: accountViewController,
+                                                           dataProvider: dataProvider,
+                                                           numberFormatter: numberFormatter,
+                                                           productResponse: productResponse,
+                                                           delegate: self)
+        
+        navigationController.pushViewController(accountViewController, animated: true)
+    }
+}
+
+//MARK: – AccountPresenterDelegate.
+
+extension ProductsFlowCoordinator: AccountPresenterDelegate {
+    
+    func accountPresenterDidSuccesfullyPerformAction(_ presenter: AccountPresenter) {
+        refreshClosure?(true)
     }
 }
 

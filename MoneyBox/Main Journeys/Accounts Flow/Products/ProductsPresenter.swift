@@ -111,6 +111,6 @@ extension ProductsPresenter {
 
 protocol ProductsPresenterDelegate: AnyObject {
     
-    func productsPresenter(_ presenter: ProductsPresenter, didSelectProductResponse productResponse: ProductResponse, withRefreshClosure refreshClosure: ((Bool) -> Void))
+    func productsPresenter(_ presenter: ProductsPresenter, didSelectProductResponse productResponse: ProductResponse, withRefreshClosure refreshClosure: @escaping ((Bool) -> Void))
     
 }
