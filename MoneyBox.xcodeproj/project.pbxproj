@@ -47,6 +47,7 @@
 		417DC97A2AB9F91D003636A3 /* AccountPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417DC9792AB9F91D003636A3 /* AccountPresenter.swift */; };
 		417DC97C2AB9F927003636A3 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417DC97B2AB9F927003636A3 /* AccountViewModel.swift */; };
 		417DC97E2ABA037E003636A3 /* NumberFormatter+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417DC97D2ABA037E003636A3 /* NumberFormatter+Additions.swift */; };
+		417DC9802ABA1184003636A3 /* AccountViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417DC97F2ABA1184003636A3 /* AccountViewModelTests.swift */; };
 		B26EF47828881E7F003BFDF2 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = B26EF47728881E7F003BFDF2 /* Networking */; };
 		B2CA46D52793508A0041B3A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2CA46D42793508A0041B3A5 /* Assets.xcassets */; };
 		B2CA46D82793508A0041B3A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2CA46D62793508A0041B3A5 /* LaunchScreen.storyboard */; };
@@ -106,6 +107,7 @@
 		417DC9792AB9F91D003636A3 /* AccountPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPresenter.swift; sourceTree = "<group>"; };
 		417DC97B2AB9F927003636A3 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		417DC97D2ABA037E003636A3 /* NumberFormatter+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Additions.swift"; sourceTree = "<group>"; };
+		417DC97F2ABA1184003636A3 /* AccountViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModelTests.swift; sourceTree = "<group>"; };
 		B24EED92288ED5740016C233 /* Networking */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Networking; sourceTree = "<group>"; };
 		B2CA46C8279350880041B3A5 /* MoneyBox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoneyBox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2CA46D42793508A0041B3A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -272,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				4132C6C42AB3155D00C00795 /* ProductsViewModelTests.swift */,
+				417DC97F2ABA1184003636A3 /* AccountViewModelTests.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -504,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				417DC9802ABA1184003636A3 /* AccountViewModelTests.swift in Sources */,
 				4132C6C52AB3155D00C00795 /* ProductsViewModelTests.swift in Sources */,
 				B2CA47672794D69A0041B3A5 /* StubData.swift in Sources */,
 			);

@@ -20,14 +20,14 @@ final class AppCoordinator {
     
     private var childFlowCoordinators = [FlowCoordinator]()
     
-    private lazy var numberFormatter: NumberFormatter = { //TODO: This should have a class of its own, handling multiple currencies, if needed.
+    private lazy var numberFormatter: NumberFormatter = { //JP: This should have a class of its own, handling multiple currencies, if needed.
        
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.maximumFractionDigits = 2
         formatter.minimumFractionDigits = 2
         formatter.locale = Locale.autoupdatingCurrent
-        formatter.currencyCode = "GBP" //TODO: This should be coming from the BE, as part of the Product / Account information.
+        formatter.currencyCode = "GBP" //JP: This should be coming from the BE, as part of the Product / Account information.
         
         return formatter
     }()

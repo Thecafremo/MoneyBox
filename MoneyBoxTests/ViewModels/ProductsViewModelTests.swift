@@ -40,7 +40,7 @@ final class ProductsViewModelTests: XCTestCase {
     
     func test_buildForData() {
         
-        //TODO: It would be simpler if we could just initialise the Model objects we need.
+        //JP: It would be simpler if we could just initialise the Model objects we need.
         
         StubData.read(file: "Accounts") { (result: Result<AccountResponse, Error>) in
             
@@ -54,10 +54,10 @@ final class ProductsViewModelTests: XCTestCase {
                                                                    numberFormatter: self.numberFormatter,
                                                                    isLoading: false)
             
-            XCTAssert(productsViewModel.cellViewModels.count == 2) //TODO: The `CellViewModels` would have their own test, and thus, there's no need to test here, too.
+            XCTAssert(productsViewModel.cellViewModels.count == 2) //JP: The `CellViewModels` would have their own test, and thus, there's no need to test here, too.
             XCTAssert(productsViewModel.titleTextSource == .literal("Hey, Bill!"))
             
-            //TODO: This would fail with the testing device is with a different `Locale`.
+            //JP: This would fail with the testing device is with a different `Locale`.
             //      `TextSource` should be tested through a mock`AssetProvider`, instead.
             
             XCTAssert(productsViewModel.subtitleTextSource == .literal("Your total plan value is of £15,707.08"))

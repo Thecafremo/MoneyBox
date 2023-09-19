@@ -33,7 +33,7 @@ extension ProductsViewModel {
             
             cellViewModels.append(ProductCellViewModel.buildForProduct(productResponse, numberFormatter: numberFormatter))
             
-            if let planValue = productResponse.planValue { //TODO: This shouldn't be optional.
+            if let planValue = productResponse.planValue { //JP: This shouldn't be optional.
                 planValues.append(planValue)
             }
         }

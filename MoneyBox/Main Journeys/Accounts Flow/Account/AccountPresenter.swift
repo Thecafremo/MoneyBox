@@ -19,7 +19,7 @@ final class AccountPresenter {
     private let numberFormatter: NumberFormatter
     private let productResponse: ProductResponse
     
-    private var updatedMoneyBox: Double? //TODO: In no way this should be done like this, but the API is not returning the whole object, nor the Object allows a regular `init`.
+    private var updatedMoneyBox: Double? //JP: In no way this should be done like this, but the API is not returning the whole object, nor the Object allows a regular `init`.
     
     //MARK: - Life Cycle.
     
@@ -52,7 +52,7 @@ extension AccountPresenter {
     
     func viewDidPressButton() {
         
-        guard let identifier = productResponse.id else { //TODO: This shouldn't be optional.
+        guard let identifier = productResponse.id else { //JP: This shouldn't be optional.
             return
         }
         
@@ -69,7 +69,7 @@ extension AccountPresenter {
             }
             
             switch result {
-            case .success(let oneOffPaymentResponse): //TODO: This should be returning the whole updated object.
+            case .success(let oneOffPaymentResponse): //JP: This should be returning the whole updated object.
                 self.updatedMoneyBox = oneOffPaymentResponse.moneybox
                 self.delegate?.accountPresenterDidSuccesfullyPerformAction(self)
                 
