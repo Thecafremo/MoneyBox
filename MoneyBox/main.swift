@@ -21,6 +21,3 @@ private func delegateClassName() -> String? {
 // MARK: - UIApplicationMain.
 
 UIApplicationMain(CommandLine.argc, CommandLine.unsafeArgv, nil, delegateClassName())
-
-
-
